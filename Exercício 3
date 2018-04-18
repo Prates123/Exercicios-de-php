@@ -1,0 +1,12 @@
+<?php 
+		   $nome  = isset($_GET["nom"])  ?$_GET["nom"]:  "X";
+			 $sexo  = isset($_GET["tsexo"])?$_GET["tsexo"]:"X";
+			 $ano = isset($_GET["dat"])  ?$_GET["dat"]:    0;
+			 $idade = date("Y") - $ano;
+			 if ($sexo == "mulher" and $idade < 25) { //mulher é o valor de value em html
+			     echo "Olá $nome <br/> você foi ACEITA";
+			 }
+			 else  {
+			     echo "Olá $nome <br/> você NÃO foi ACEITO";
+			 }
+		 ?>
