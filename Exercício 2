@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action ="index.php" method="POST">
+		
+		Número: <input type="n" name="n">
+		
+		<input type="submit" name="nu" value="Verificar">
+		</form>
+		<?php
+if(isset($_POST['n'])){
+    $n= $_POST['n'];
+    if ($n %  10 ==  0)
+    {
+        echo $n . " é divisível por 10 =  " . $n/10 . "<br>";}
+    else
+    {
+        echo $n . " nao divisível por 10 <br>";
+    }
+    if ($n %  5 ==  0)
+    {
+        echo $n . " é divisível por 5 =  " . $n/5 . "<br>";
+    }
+    else
+    {
+        echo $n . " nao divisível por 5 <br>";
+    }
+    if ($n %  2 ==  0)
+    {
+        echo $n . " é divisível por 2 =  " . $n/2 . "<br>";
+    }
+    else
+    {
+        echo $n . " nao divisível por 2 <br>";
+    }
+}
+else echo "informe um numero";
+?>
+			</body>
+			</html>
