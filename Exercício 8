@@ -1,0 +1,14 @@
+<?php
+$ts=array(7,-10,13,8,4,-7,-12,-3,3,-9,6,-1,-6,7,15,-5,7,12,-3,4);
+$pos_arr=array(); $neg_arr=array();
+foreach($ts as $val)
+{
+    ($val<0) ?  $neg_arr[]=$val : $pos_arr[]=$val;
+}
+print_r($pos_arr);
+print_r($neg_arr);
+$total = array_sum($pos_arr);
+$count = count($neg_arr);
+print_r($total);
+print_r($count);
+?>
