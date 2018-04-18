@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action ="index.php" method="POST">
+		
+		Primeiro Número: <input type="number" name="numero1">
+		Segundo Número: <input type ="number" name="numero2">
+		
+		<input type="submit" name="verificar" value="Verificar">
+		</form>
+		<?php
+		if ($_POST){
+			if($_POST['verificar']){
+			$numero1 = $_POST['numero1'];
+			$numero2 = $_POST['numero2'];
+			
+			$soma = $numero1 + $numero2;
+			
+			if($soma > 20){
+			  $soma = $soma +8;
+			  
+			  echo "O valor da soma é: ".$soma;
+			  
+			}else{
+					$soma = $soma - 5;
+					
+					echo "o valor da soma é: ".$soma;
+				}
+			   }
+			}
+			?>
+			</body>
+			</html>
