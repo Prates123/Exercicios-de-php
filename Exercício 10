@@ -1,0 +1,19 @@
+<?php
+MultString('SONHO');
+function MultString($string = ''){
+try{
+if (empty($string)){
+throw new Exception("PARAMETRO STRING NECESSARIO PARA SER EXECUTADO");
+}else{
+for ($x=0; $x < 4 ; $x++){
+for ($y=0; $y < $x ; $y++) {
+echo ' ' .$string;
+}
+echo "<br>";
+}
+}
+} catch (Exception $e) {
+echo "Erro de codigo :<br> <pre>{$e->getMessage()}</pre>";
+}
+}
+?>
